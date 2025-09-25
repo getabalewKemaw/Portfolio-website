@@ -1,0 +1,104 @@
+import React, { useEffect, useRef } from "react";
+import Tilt from "react-parallax-tilt";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Use free Unsplash/Pexels images for better quality and variety
+const testimonialData = [
+  {
+    name: "Alice Johnson",
+    role: "Frontend Developer",
+    image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&q=80&facepad=2",
+    text: "Getabalew is a highly skilled developer! His React and GSAP animations made our project come alive. Truly professional and punctual.",
+  },
+  {
+    name: "Michael Smith",
+    role: "Project Manager",
+    image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&w=400&h=400&fit=facearea&facepad=2",
+    text: "Working with Getabalew was seamless. His UI/UX expertise elevated our app, making it both intuitive and visually stunning.",
+  },
+  {
+    name: "Sophia Lee",
+    role: "Designer",
+    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=400&q=80&facepad=2",
+    text: "Getabalew’s attention to detail and coding skills are exceptional. He turned our concepts into interactive experiences effortlessly.",
+  },
+];
+
+const Testimonial = () => {
+  const cardsRef = useRef([]);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    cardsRef.current.forEach((el, idx) => {
+      if (el) {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 40, scale: 0.9 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.8,
+            ease: "back.out(1.7)",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 90%",
+              toggleActions: "play none none none",
+              once: true,
+            },
+            delay: idx * 0.12,
+          }
+        );
+      }
+    });
+    return () => ScrollTrigger.getAll().forEach(t => t.kill());
+  }, []);
+
+  return (
+    <section
+      id="testimonial"
+      ref={sectionRef}
+      className="relative bg-black text-white py-20 w-full px-2 sm:px-6 md:px-14"
+    >
+      <div className="w-full max-w-7xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 mb-12">
+          Testimonials
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 w-full">
+          {testimonialData.map((item, index) => (
+            <Tilt
+              key={index}
+              tiltMaxAngleX={10}
+              tiltMaxAngleY={10}
+              glareEnable={true}
+              glareMaxOpacity={0.13}
+              scale={1.04}
+              className="w-full"
+            >
+              <div
+                ref={el => (cardsRef.current[index] = el)}
+                className="bg-gray-900 p-7 rounded-2xl shadow-lg flex flex-col items-center text-center w-full h-full
+                  hover:scale-105 hover:shadow-cyan-400/30 hover:shadow-2xl transition-transform duration-300"
+              >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow-lg shadow-cyan-400/30 transition-all duration-300"
+                  loading="lazy"
+                />
+                <h3 className="text-lg sm:text-xl font-semibold mb-1">{item.name}</h3>
+                <p className="text-cyan-400 text-xs sm:text-sm mb-3">{item.role}</p>
+                <p className="text-gray-300 text-sm sm:text-base">{item.text}</p>
+              </div>
+            </Tilt>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonial;
