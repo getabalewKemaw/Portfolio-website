@@ -61,7 +61,7 @@ const Experience = () => {
                   {/* Left card */}
                   {isLeft && (
                     <div className="md:w-1/2 w-full pr-0 md:pr-8 flex flex-col items-end">
-                      <div className="bg-gray-900/90 p-6 rounded-2xl shadow-lg text-left w-full max-w-md">
+                      <div className="glass p-6 rounded-2xl text-left w-full max-w-md">
                         <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{exp.role}</h3>
                         <p className="text-gray-300 text-sm sm:text-base whitespace-pre-line">{exp.description.trim()}</p>
                       </div>
@@ -79,7 +79,7 @@ const Experience = () => {
                   {/* Right card */}
                   {!isLeft && (
                     <div className="md:w-1/2 w-full pl-0 md:pl-8 flex flex-col items-start">
-                      <div className="bg-gray-900/90 p-6 rounded-2xl shadow-lg text-left w-full max-w-md">
+                      <div className="glass p-6 rounded-2xl text-left w-full max-w-md">
                         <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{exp.role}</h3>
                         <p className="text-gray-300 text-sm sm:text-base whitespace-pre-line">{exp.description.trim()}</p>
                       </div>

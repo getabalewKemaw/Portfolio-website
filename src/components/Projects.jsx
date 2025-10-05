@@ -90,8 +90,7 @@ const Projects = () => {
             >
               <div
                 ref={el => cardsRef.current[index] = el}
-                className="relative flex flex-col h-full bg-gray-900 rounded-2xl shadow-lg overflow-hidden 
-                  transition-transform duration-300 hover:scale-105 hover:shadow-cyan-600/30 hover:shadow-2xl group"
+                className="relative flex flex-col h-full glass rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 group"
               >
                 {/* Project Image */}
                 <img
@@ -110,7 +109,7 @@ const Projects = () => {
                     {project.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="bg-gray-800 p-2 rounded-full flex items-center justify-center text-lg"
+                        className="bg-white/10 backdrop-blur-sm border border-white/10 p-2 rounded-full flex items-center justify-center text-lg"
                         title={tech}
                       >
                         {techIcons[tech] || tech}
@@ -123,7 +122,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-gray-300 bg-gray-800 px-3 py-2 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200 shadow focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      className="flex items-center gap-1 text-gray-200 bg-white/10 backdrop-blur-sm border border-white/10 px-3 py-2 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                       title="GitHub"
                     >
                       <FaGithub size={18} className="mr-1" /> <span className="text-xs">Code</span>
@@ -133,7 +132,7 @@ const Projects = () => {
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-gray-300 bg-gray-800 px-3 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-200 shadow focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        className="flex items-center gap-1 text-gray-200 bg-white/10 backdrop-blur-sm border border-white/10 px-3 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         title="Live Demo"
                       >
                         <FaExternalLinkAlt size={16} className="mr-1" /><span className="text-xs">Live</span>
