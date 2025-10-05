@@ -4,6 +4,7 @@ import { ReactTyped } from "react-typed";
 import portfolioData from "../constants/portfolioData";
 import Button from "./Button";
 import { FaDownload, FaFolderOpen } from "react-icons/fa";
+import HeroTorus from "./HeroTorus";
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -46,10 +47,19 @@ const Hero = () => {
     <section
       id="home"
       ref={heroRef}
-      className="min-h-screen w-full flex flex-col-reverse md:flex-row items-center justify-center gap-8 px-6 md:px-20 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat relative text-white my-12 mx-0 left-0 right-0"
+      className="min-h-screen w-full flex flex-col-reverse md:flex-row items-center justify-center gap-8 px-6 md:px-20 relative text-white my-12 mx-0 left-0 right-0"
     >
-      {/* Optional: Overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/40 pointer-events-none z-0"></div>
+      {/* Background image from Unsplash with overlay */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1520975661595-6453be3f7070?q=80&w=2060&auto=format&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
 
       {/* Left: Text */}
       <div className="z-10 flex-1 flex flex-col justify-center space-y-6 mx-0 w-full max-w-2xl">
@@ -112,14 +122,11 @@ const Hero = () => {
         </nav>
       </div>
 
-      {/* Right: Image */}
+      {/* Right: 3D Torus */}
       <div className="z-10 flex-1 flex justify-center items-center w-full">
-        <img
-          src="/images/hero-visual.jpg"
-          alt="Profile picture"
-          className="hero-img w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-cyan-500 shadow-lg shadow-cyan-500/30 aspect-square"
-          loading="lazy"
-        />
+        <div className="w-full max-w-xl glass rounded-3xl p-2">
+          <HeroTorus />
+        </div>
       </div>
     </section>
   );

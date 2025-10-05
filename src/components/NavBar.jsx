@@ -30,7 +30,7 @@ const NavBar = () => {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 backdrop-blur-md shadow-lg"
+      className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-xl border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
        
@@ -47,7 +47,7 @@ const NavBar = () => {
                 smooth={true}
                 duration={600}
                 offset={-80}
-                className="cursor-pointer relative group transition-colors duration-300"
+                className="cursor-pointer relative group transition-colors duration-300 px-2 py-1 rounded-xl hover:bg-white/5"
               >
                 {link.title}
                 {/* Hover underline effect */}
@@ -68,7 +68,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black bg-opacity-95 px-6 py-8 space-y-6 text-center text-white font-medium">
+        <div className="md:hidden bg-black/70 backdrop-blur-2xl px-6 py-8 space-y-6 text-center text-white font-medium border-t border-white/10">
           {portfolioData.navLinks.map((link) => (
             <div key={link.id} className="nav-item">
               <Link
@@ -77,7 +77,7 @@ const NavBar = () => {
                 duration={600}
                 offset={-80}
                 onClick={() => setIsOpen(false)}
-                className="block text-lg cursor-pointer relative group"
+                className="block text-lg cursor-pointer relative group px-3 py-2 rounded-xl hover:bg-white/5"
               >
                 {link.title}
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
