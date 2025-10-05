@@ -80,13 +80,13 @@ const Testimonial = () => {
             >
               <div
                 ref={el => (cardsRef.current[index] = el)}
-                className="bg-gray-900 p-7 rounded-2xl shadow-lg flex flex-col items-center text-center w-full h-full
-                  hover:scale-105 hover:shadow-cyan-400/30 hover:shadow-2xl transition-transform duration-300"
+                className="glass p-7 rounded-2xl flex flex-col items-center text-center w-full h-full
+                  hover:scale-105 transition-transform duration-300"
               >
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-cyan-400 shadow-lg shadow-cyan-400/30 transition-all duration-300"
+                  className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-cyan-400/60 shadow-lg shadow-cyan-400/30 transition-all duration-300"
                   loading="lazy"
                 />
                 <h3 className="text-lg sm:text-xl font-semibold mb-1">{item.name}</h3>
