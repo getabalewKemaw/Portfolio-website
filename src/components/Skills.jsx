@@ -60,8 +60,8 @@ const Skills = () => {
             >
               <div
                 ref={(el) => (skillsRef.current[index] = el)}
-                className="flex flex-col items-center justify-center bg-gray-900 p-6 rounded-2xl shadow-lg cursor-pointer 
-                           transform transition-transform duration-300 hover:scale-110 hover:shadow-2xl hover:bg-cyan-900 w-full"
+                className="flex flex-col items-center justify-center glass p-6 rounded-2xl cursor-pointer 
+                           transform transition-transform duration-300 hover:scale-110 w-full"
               >
                 <div className="text-4xl sm:text-5xl mb-2">{skill.icon}</div>
                 <h3 className="text-base sm:text-xl font-semibold mb-1">{skill.name}</h3>

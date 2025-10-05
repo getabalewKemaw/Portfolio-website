@@ -99,7 +99,7 @@ const Contact = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-9 md:gap-12 w-full">
           {/* Contact Info */}
-          <div className="space-y-6 contact-card text-left flex flex-col justify-center bg-gray-900/80 p-6 rounded-2xl shadow-lg w-full">
+          <div className="space-y-6 contact-card text-left flex flex-col justify-center glass p-6 rounded-2xl w-full">
             <div className="flex items-center gap-4">
               <FaEnvelope className="text-cyan-400 text-2xl" />
               <p className="break-all">gech12kemaw@gmail.com</p>
@@ -117,7 +117,7 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="contact-card flex flex-col gap-4 bg-gray-900/90 p-6 rounded-2xl shadow-lg w-full"
+            className="contact-card flex flex-col gap-4 glass p-6 rounded-2xl w-full"
           >
             <div className="relative">
               <FaUser className="absolute top-3 left-3 text-cyan-400" />
