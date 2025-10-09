@@ -1,136 +1,153 @@
-import React, { useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, RoundedBox, Decal, useTexture, ContactShadows } from "@react-three/drei";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ReactTyped } from "react-typed";
+import portfolioData from "../constants/portfolioData";
+import Button from "./Button";
+import { FaDownload, FaFolderOpen } from "react-icons/fa";
+import CanvasScene from "./CanvasScene";
 
-// ✅ Correct, working URLs for textures
-// ✅ Iconify CDN URLs (guaranteed to work)
-const [reactLogoUrl, nodeLogoUrl, threeLogoUrl, tailwindLogoUrl] = [
-  "https://api.iconify.design/skill-icons:react-dark.svg",
-  "https://api.iconify.design/skill-icons:nodejs-dark.svg",
-  "https://api.iconify.design/skill-icons:threejs-dark.svg",
-  "https://api.iconify.design/skill-icons:tailwindcss-dark.svg",
-];
+const Hero = () => {
+  const heroRef = useRef(null);
+  const { name, socialLinks } = portfolioData.hero;
 
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".hero-title",
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+      );
+      gsap.fromTo(
+        ".hero-typed",
+        { opacity: 0 },
+        { opacity: 1, duration: 1, delay: 0.5 }
+      );
+      gsap.fromTo(
+        ".hero-buttons",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.8, delay: 1, ease: "power3.out" }
+      );
+      gsap.fromTo(
+        ".hero-social",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.8, delay: 1.2, stagger: 0.15, ease: "power3.out" }
+      );
+    }, heroRef);
 
-
-function Laptop() {
-  const groupRef = useRef(null);
-  const openAngle = -1.1; // lid open angle in radians
-
-  // Load textures from URLs
-  const [reactLogo, nodeLogo, threeLogo, tailwindLogo] = useTexture([
-    reactLogoUrl,
-    nodeLogoUrl,
-    threeLogoUrl,
-    tailwindLogoUrl,
-  ]);
-
-  [reactLogo, nodeLogo, threeLogo, tailwindLogo].forEach((tex) => {
-    if (tex) tex.anisotropy = 8;
-  });
-
-  useFrame((_, delta) => {
-    if (groupRef.current) groupRef.current.rotation.y += delta * 0.15;
-  });
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <group ref={groupRef}>
-      <Float speed={0.8} rotationIntensity={0.4} floatIntensity={0.8}>
-        <group>
-          {/* Base */}
-          <RoundedBox
-            args={[2.4, 0.12, 1.6]}
-            radius={0.06}
-            smoothness={8}
-            position={[0, 0, 0]}
-            castShadow
-            receiveShadow
-          >
-            <meshStandardMaterial color="#0b1220" metalness={0.55} roughness={0.35} />
-            {/* Stickers on base (top face) */}
-            <Decal
-              position={[-0.65, 0.065, 0.35]}
-              rotation={[-Math.PI / 2, 0, -0.2]}
-              scale={0.35}
-              map={reactLogo}
-            />
-            <Decal
-              position={[0.55, 0.065, -0.1]}
-              rotation={[-Math.PI / 2, 0, 0.15]}
-              scale={0.28}
-              map={nodeLogo}
-            />
-            <Decal
-              position={[0, 0.065, 0.55]}
-              rotation={[-Math.PI / 2, 0, 0.3]}
-              scale={0.26}
-              map={tailwindLogo}
-            />
-          </RoundedBox>
+    <section
+      id="home"
+      ref={heroRef}
+      className="relative w-full min-h-screen bg-black text-white flex items-center justify-center overflow-hidden"
+    >
+      {/* Background Layer 1 - Base gradient waves */}
+      <div
+        className="absolute inset-0 opacity-40 animate-pulse"
+        style={{
+          backgroundImage: "url(/images/hero-bg-1.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          mixBlendMode: "screen",
+        }}
+      />
 
-          {/* Keyboard deck */}
-          <mesh position={[0, 0.07, 0]} receiveShadow>
-            <boxGeometry args={[2.28, 0.02, 1.46]} />
-            <meshStandardMaterial color="#111827" roughness={0.9} metalness={0.1} />
-          </mesh>
+      {/* Background Layer 2 - Geometric grid overlay */}
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: "url(/images/hero-bg-2.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          mixBlendMode: "overlay",
+        }}
+      />
 
-          {/* Hinge */}
-          <mesh position={[0, 0.06, -0.8]} castShadow>
-            <cylinderGeometry args={[0.05, 0.05, 2.2, 24]} />
-            <meshStandardMaterial color="#0f172a" metalness={0.6} roughness={0.4} />
-          </mesh>
+      {/* Background Layer 3 - Light rays and particles */}
+      <div
+        className="absolute inset-0 opacity-30 animate-pulse"
+        style={{
+          backgroundImage: "url(/images/hero-bg-3.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          mixBlendMode: "lighten",
+          animationDuration: "4s",
+          animationDelay: "1s",
+        }}
+      />
 
-          {/* Lid + screen */}
-          <group position={[0, 0.06, -0.8]} rotation={[openAngle, 0, 0]}>
-            <RoundedBox
-              args={[2.4, 1.6, 0.08]}
-              radius={0.06}
-              smoothness={8}
-              position={[0, 0.8, 0]}
-              castShadow
-              receiveShadow
+      <div className="absolute inset-0 bg-gradient-to-b from-[#06b6d4]/20 via-transparent to-black/60" />
+
+      {/* Canvas behind content */}
+      <div className="absolute inset-0 z-0">
+        <CanvasScene />
+      </div>
+
+      <div className="z-10 flex flex-col justify-center space-y-6 px-6 md:px-20 max-w-4xl text-center">
+        <h1 className="hero-title text-4xl md:text-6xl font-extrabold leading-tight font-poppins text-shadow">
+          Hi, I'm{" "}
+          <span className="text-cyan-400 drop-shadow-lg">
+            {name.split(" ")[0]}
+          </span>{" "}
+          {name.split(" ").slice(1).join(" ")}
+        </h1>
+
+        {/* Typed Animation */}
+        <h2 className="hero-typed text-2xl md:text-3xl font-bold" style={{ color: "#06b6d4" }}>
+          <ReactTyped
+            strings={[
+              "FullStack Developer",
+              "JavaScript Developer",
+              "UI/UX Designer",
+              "Mobile Application Developer",
+            ]}
+            typeSpeed={60}
+            backSpeed={40}
+            backDelay={1500}
+            loop
+          />
+        </h2>
+
+        {/* Buttons */}
+        <div className="hero-buttons flex flex-col sm:flex-row gap-4 pt-2 justify-center">
+          <Button
+            text="View Projects"
+            icon={<FaFolderOpen />}
+            onClick={() =>
+              document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="bg-cyan-500 hover:bg-cyan-600 focus:ring-2 focus:ring-cyan-300"
+          />
+          <Button
+            text="Download CV"
+            icon={<FaDownload />}
+            onClick={() => window.open("/files/Getabalew_Kemaw_CV.pdf", "_blank")}
+            className="bg-pink-500 hover:bg-pink-600 focus:ring-2 focus:ring-pink-300"
+          />
+        </div>
+
+        {/* Social Links */}
+        <nav className="flex gap-6 pt-2 justify-center" aria-label="Social media">
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-social text-2xl hover:text-cyan-400 focus:text-cyan-300 transition-colors duration-300 outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded"
+              aria-label={social.name || `Social link ${index + 1}`}
             >
-              <meshStandardMaterial color="#0b1220" metalness={0.55} roughness={0.35} />
-              {/* Sticker on lid back */}
-              <Decal
-                position={[0.6, 0.8, 0.041]}
-                rotation={[0, 0.2, 0]}
-                scale={0.35}
-                map={threeLogo}
-              />
-            </RoundedBox>
+              {social.icon}
+            </a>
+          ))}
+        </nav>
+      </div>
 
-            {/* Screen (inside) */}
-            <mesh position={[0, 0.8, -0.041]} castShadow>
-              <planeGeometry args={[2.28, 1.44]} />
-              <meshStandardMaterial
-                color="#0b0f1a"
-                emissive="#0b0f1a"
-                emissiveIntensity={0.35}
-                roughness={0.9}
-              />
-            </mesh>
-          </group>
-        </group>
-      </Float>
-    </group>
+      <div className="absolute inset-0 pointer-events-none bg-gradient-radial from-transparent via-transparent to-black/40" />
+    </section>
   );
-}
+};
 
-export default function HeroTorus() {
-  return (
-    <div className="w-full h-64 sm:h-72 md:h-96 lg:h-[28rem]">
-      <Canvas
-        shadows
-        dpr={[1, 2]}
-        gl={{ antialias: true, alpha: true }}
-        camera={{ position: [0, 0.4, 6], fov: 50 }}
-      >
-        <ambientLight intensity={0.7} />
-        <directionalLight position={[4, 4, 3]} intensity={1.1} color="#93c5fd" castShadow />
-        <Laptop />
-        <ContactShadows position={[0, -1.1, 0]} opacity={0.35} scale={6} blur={2.6} far={3} />
-      </Canvas>
-    </div>
-  );
-}
+export default Hero;

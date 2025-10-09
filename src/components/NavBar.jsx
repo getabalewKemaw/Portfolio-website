@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import portfolioData from "../constants/portfolioData";
 
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
@@ -35,7 +36,8 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
        
         <div className="text-2xl font-bold text-white tracking-wide cursor-pointer hover:text-cyan-400 transition-colors duration-300">
-          GK<span className="text-cyan-400">.</span>
+         <Link to="/"> GK</Link>  
+          <span className="text-cyan-400">.</span>
         </div>
 
         {/* Desktop Links */}
