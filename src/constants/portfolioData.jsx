@@ -53,11 +53,12 @@ const portfolioData = {
 I am a Full-Stack and Mobile App Software Engineer with 2 years of professional experience, specializing in building responsive, interactive web applications using React, Tailwind CSS, Next.js, Node.js, Express, MongoDB, Python, and PostgreSQL. I have hands-on expertise in full-stack development, applying best practices including state management, code optimization, and seamless API integration.
 
 With a collaborative mindset and a passion for innovation, I actively contribute to open-source projects and engage with tech communities. Based in Debre Berhan, Ethiopia, I stay up-to-date with the latest technologies, continuously enhancing my skills to deliver high-quality, scalable, and user-centric solutions.    `,
-    resumeLink: "/resume.pdf", // Place your professional resume PDF in /public; ensure it highlights education, certifications, and achievements
+    resumeLink: "https://drive.google.com/file/d/1CUybI8k8qmM3iOSqoeSX5Q6VixoykJr8/view?usp=drive_link", // Place your professional resume PDF in /public; ensure it highlights education, certifications, and achievements
   },
 
   // ---------------- PROJECTS SECTION ----------------
-   projects : [
+// ---------------- PROJECTS SECTION ----------------
+projects: [
   {
     title: "Megezez Food Delivery Website",
     description: `
@@ -112,7 +113,7 @@ With a collaborative mindset and a passion for innovation, I actively contribute
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    title: "Movie App (MERN Stack)",
+    title: "Movie App",
     description: `
       A full-stack movie application where users can browse, search, and save their favorite movies. 
       Built with the MERN stack (MongoDB, Express, React, Node.js) and styled with Tailwind CSS. 
@@ -120,12 +121,61 @@ With a collaborative mindset and a passion for innovation, I actively contribute
       and a modern user interface. This project demonstrates both frontend and backend expertise 
       along with database management.
     `,
-    image: "https://images.unsplash.com/photo-1741243413186-b132bab9bae0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vdmllJTIwYXBwJTIwJTIwYmFubmVyfGVufDB8fDB8fHww", 
-    github: "https://github.com/getabalewKemaw/movie-app", // replace if repo exists
-    live: "#",
+    image:"public/images/movie.png",
+    github: "https://github.com/getabalewKemaw/movie-app",
+    live: "https://cinisphere.vercel.app/",
     technologies: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
   },
+  {
+    title: "Portfolio Website",
+    description: `
+      A modern personal portfolio website built with React, Tailwind CSS, Framer Motion, and GSAP. 
+      Showcases personal projects, animations, and interactive UI elements. Highlights frontend skills, 
+      responsive design, and user experience best practices.
+    `,
+    image: "public/images/portifolio.png",
+    github: "https://github.com/getabalewKemaw/Portfolio-website",
+    live: "https://getabalewkemaw.vercel.app",
+    technologies: ["React", "Tailwind CSS", "Framer Motion", "GSAP"],
+  },
+  {
+    title: "SkillShare Hub",
+    description: `
+      A mini course-sharing platform built with Next.js, Prisma, and PostgreSQL. 
+      Includes separate dashboards for students and instructors, course management, and enrollment features. 
+      Demonstrates full-stack capabilities, database integration, and responsive design.
+    `,
+    image: "public/images/skillsharehub.png",
+    github: "https://github.com/getabalewKemaw/SkillshareHub-",
+    live: "https://skillshare-hub.vercel.app/",
+    technologies: ["Next.js", "Prisma", "PostgreSQL", "Tailwind CSS"],
+  },
+  {
+    title: "Customer AI Assistant",
+    description: `
+      An AI-powered customer assistant built with MERN Stack and Gemini API. 
+      Provides instant intelligent answers to user queries, with authentication and responsive design. 
+      Demonstrates integration of AI APIs with full-stack applications.
+    `,
+    image: "public/images/ai.png",
+    github: "https://github.com/getabalewKemaw/Customer-Ai-Assistant",
+    live: "https://supportlyai.vercel.app/",
+    technologies: ["MongoDB", "Express", "React", "Node.js", "Gemini API", "Tailwind CSS"],
+  },
+  {
+    title: "ShopifyX",
+    description: `
+      A mini e-commerce platform built with Spring Boot, Next.js, PostgreSQL, and Tailwind CSS. 
+      Includes admin and user dashboards, product listings, authentication, and order management. 
+      Demonstrates backend logic, full-stack integration, and responsive frontend design.
+    `,
+    image: "public/images/sopifyx.png",
+    github: "https://github.com/getabalewKemaw/shopifyFrontEnd",
+    live: "#",
+    technologies: ["Spring Boot", "Next.js", "PostgreSQL", "Tailwind CSS"],
+  },
 ],
+
 
   // ---------------- SKILLS SECTION ----------------
 
