@@ -93,12 +93,12 @@ const Projects = () => {
                 className="relative flex flex-col h-full glass rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 group"
               >
                 {/* Project Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-44 sm:h-48 md:h-52 object-cover"
-                  loading="lazy"
-                />
+<img
+  src={project.image}
+  alt={project.title}
+  className="w-full h-auto object-contain"
+  loading="lazy"
+/>
 
                 {/* Project Info */}
                 <div className="flex flex-col flex-1 p-5">
