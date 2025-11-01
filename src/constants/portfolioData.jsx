@@ -121,7 +121,7 @@ projects: [
       and a modern user interface. This project demonstrates both frontend and backend expertise 
       along with database management.
     `,
-    image:"public/images/movie.png",
+    image:"/images/movie.png",
     github: "https://github.com/getabalewKemaw/movie-app",
     live: "https://cinisphere.vercel.app/",
     technologies: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
@@ -133,7 +133,7 @@ projects: [
       Showcases personal projects, animations, and interactive UI elements. Highlights frontend skills, 
       responsive design, and user experience best practices.
     `,
-    image: "public/images/portifolio.png",
+    image: "/images/portifolio.png",
     github: "https://github.com/getabalewKemaw/Portfolio-website",
     live: "https://getabalewkemaw.vercel.app",
     technologies: ["React", "Tailwind CSS", "Framer Motion", "GSAP"],
@@ -145,7 +145,7 @@ projects: [
       Includes separate dashboards for students and instructors, course management, and enrollment features. 
       Demonstrates full-stack capabilities, database integration, and responsive design.
     `,
-    image: "public/images/skillsharehub.png",
+    image: "/images/skillsharehub.png",
     github: "https://github.com/getabalewKemaw/SkillshareHub-",
     live: "https://skillshare-hub.vercel.app/",
     technologies: ["Next.js", "Prisma", "PostgreSQL", "Tailwind CSS"],
@@ -157,7 +157,7 @@ projects: [
       Provides instant intelligent answers to user queries, with authentication and responsive design. 
       Demonstrates integration of AI APIs with full-stack applications.
     `,
-    image: "public/images/ai.png",
+    image: "/images/ai.png",
     github: "https://github.com/getabalewKemaw/Customer-Ai-Assistant",
     live: "https://supportlyai.vercel.app/",
     technologies: ["MongoDB", "Express", "React", "Node.js", "Gemini API", "Tailwind CSS"],
@@ -169,7 +169,7 @@ projects: [
       Includes admin and user dashboards, product listings, authentication, and order management. 
       Demonstrates backend logic, full-stack integration, and responsive frontend design.
     `,
-    image: "public/images/sopifyx.png",
+    image: "/images/sopifyx.png",
     github: "https://github.com/getabalewKemaw/shopifyFrontEnd",
     live: "#",
     technologies: ["Spring Boot", "Next.js", "PostgreSQL", "Tailwind CSS"],
