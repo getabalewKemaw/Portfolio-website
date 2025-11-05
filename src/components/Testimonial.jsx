@@ -8,21 +8,21 @@ gsap.registerPlugin(ScrollTrigger);
 // Use free Unsplash/Pexels images for better quality and variety
 const testimonialData = [
   {
-    name: "Alice Johnson",
-    role: "Frontend Developer",
-    image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&q=80&facepad=2",
-    text: "Getabalew is a highly skilled developer! His React and GSAP animations made our project come alive. Truly professional and punctual.",
+    name: "Altaseb  Cherent",
+    role: "Full stack  Developer",
+    image: "https://avatars.githubusercontent.com/u/185071027?v=4",
+    text: "Getabalew is a highly skilled developer! His React and collaboration  skills made our project come alive. Truly professional and punctual.",
   },
   {
-    name: "Michael Smith",
-    role: "Project Manager",
-    image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&w=400&h=400&fit=facearea&facepad=2",
-    text: "Working with Getabalew was seamless. His UI/UX expertise elevated our app, making it both intuitive and visually stunning.",
+    name: "Leta kasahun",
+    role: "Full stack developer",
+    image: "https://avatars.githubusercontent.com/u/193022391?v=4",
+    text: "Working with Getabalew was seamless. His backend  skills elevated our app, making it both intuitive and visually stunning.",
   },
   {
-    name: "Sophia Lee",
-    role: "Designer",
-    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=400&q=80&facepad=2",
+    name: "Getahun Mengste",
+    role: "Front end Developer",
+    image: "images/gech.png",
     text: "Getabalew’s attention to detail and coding skills are exceptional. He turned our concepts into interactive experiences effortlessly.",
   },
 ];

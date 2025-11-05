@@ -41,7 +41,7 @@ const portfolioData = {
     socialLinks: [
       { icon: <FaGithub />, url: "https://github.com/getabalewKemaw" }, 
       { icon: <FaLinkedin />, url: "https://linkedin.com/in/getabalewKemaw" }, 
-      { icon: <FaTwitter />, url: "https://twitter.com/getabalewKemaw" }, 
+      { icon: <FaTwitter />, url: "https://twitter.com/getabalewKemawP" }, 
       { icon: <FaEnvelope />, url: "mailto:getabalewkemaw@gmail.com" }, 
     ],
   },
@@ -50,7 +50,7 @@ const portfolioData = {
   about: {
     title: "About Me",
     description: `
-I am a Full-Stack and Mobile App Software Engineer with 2 years of professional experience, specializing in building responsive, interactive web applications using React, Tailwind CSS, Next.js, Node.js, Express, MongoDB, Python, and PostgreSQL. I have hands-on expertise in full-stack development, applying best practices including state management, code optimization, and seamless API integration.
+I am a Full-Stack developer  with 1 years of  experience(Independant self intiative  projects), specializing in building responsive, interactive web applications using React, Tailwind CSS, Next.js, Node.js, Express, MongoDB, Python, ,java,php,and PostgreSQL. I have hands-on expertise in full-stack development, applying best practices including state management, code optimization, and seamless API integration.
 
 With a collaborative mindset and a passion for innovation, I actively contribute to open-source projects and engage with tech communities. Based in Debre Berhan, Ethiopia, I stay up-to-date with the latest technologies, continuously enhancing my skills to deliver high-quality, scalable, and user-centric solutions.    `,
     resumeLink: "https://drive.google.com/file/d/1CUybI8k8qmM3iOSqoeSX5Q6VixoykJr8/view?usp=drive_link", // Place your professional resume PDF in /public; ensure it highlights education, certifications, and achievements
@@ -185,8 +185,6 @@ projects: [
   { name: "React", icon: <FaReact className="text-blue-500" />, proficiency: "Expert" },
   { name: "Next.js", icon: <SiNextdotjs className="text-black" />, proficiency: "Advanced" },
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" />, proficiency: "Advanced" },
-  { name: "GSAP", icon: <SiGreensock className="text-green-500" />, proficiency: "Expert" },
-  { name: "Three.js", icon: <SiThreedotjs className="text-gray-800" />, proficiency: "Advanced" },
   { name: "HTML", icon: <SiHtml5 className="text-orange-600" />, proficiency: "Expert" },
   { name: "CSS", icon: <SiCss3 className="text-blue-500" />, proficiency: "Expert" },
   { name: "JavaScript/ES6+", icon: <SiJavascript className="text-yellow-500" />, proficiency: "Expert" },
@@ -204,10 +202,10 @@ projects: [
   { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-800" />, proficiency: "Intermediate" },
 
   // DevOps & Cloud
-  { name: "Docker & Containerization", icon: <SiDocker className="text-blue-400" />, proficiency: "Intermediate" },
-  { name: "AWS Cloud Services", icon: <SiAwsamplify className="text-orange-500" />, proficiency: "Beginner" },
-  { name: "DevOps & CI/CD", icon: <FaCloud className="text-purple-500" />, proficiency: "Intermediate" },                 
-  ],
+  // {  name: "Docker & Containerization", icon: <SiDocker className="text-blue-400" />, proficiency: "Intermediate" },
+  // { name: "AWS Cloud Services", icon: <SiAwsamplify className="text-orange-500" />, proficiency: "Beginner" },
+  // { name: "DevOps & CI/CD", icon: <FaCloud className="text-purple-500" />, proficiency: "Intermediate" },                 
+  ], 
   // ---------------- EXPERIENCE SECTION (Added for Professionalism) ----------------
  experience: [
   {
@@ -239,7 +237,7 @@ projects: [
   },
   {
     year: "2025 - Present",
-    role: "Mobile App Developer",
+    role: "Mobile App Developemnt   learner",
     description: `
       Currently exploring mobile application development with React Native. 
       Building cross-platform apps and integrating APIs for real-world use cases. 
