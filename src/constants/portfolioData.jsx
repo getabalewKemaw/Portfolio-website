@@ -53,7 +53,7 @@ const portfolioData = {
 I am a Full-Stack developer  with 1 years of  experience(Independant self intiative  projects), specializing in building responsive, interactive web applications using React, Tailwind CSS, Next.js, Node.js, Express, MongoDB, Python, ,java,php,and PostgreSQL. I have hands-on expertise in full-stack development, applying best practices including state management, code optimization, and seamless API integration.
 
 With a collaborative mindset and a passion for innovation, I actively contribute to open-source projects and engage with tech communities. Based in Debre Berhan, Ethiopia, I stay up-to-date with the latest technologies, continuously enhancing my skills to deliver high-quality, scalable, and user-centric solutions.    `,
-    resumeLink: "https://drive.google.com/file/d/1CUybI8k8qmM3iOSqoeSX5Q6VixoykJr8/view?usp=drive_link", // Place your professional resume PDF in /public; ensure it highlights education, certifications, and achievements
+    resumeLink: "https://drive.google.com/file/d/1iLbP0nTDgI0N0uiqjcQ276Nq4znLihTc/view?usp=drive_link", // Place your professional resume PDF in /public; ensure it highlights education, certifications, and achievements
   },
 
   // ---------------- PROJECTS SECTION ----------------
