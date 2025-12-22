@@ -59,19 +59,65 @@ With a collaborative mindset and a passion for innovation, I actively contribute
   // ---------------- PROJECTS SECTION ----------------
 // ---------------- PROJECTS SECTION ----------------
 projects: [
+
   {
-    title: "Megezez Food Delivery Website",
-    description: `
-      A professional front-end food delivery website built with HTML, CSS, and JavaScript. 
-      This project highlights my ability to design visually appealing and user-friendly web interfaces, 
-      with a strong focus on responsive layouts, interactive elements, and smooth animations. 
-      It demonstrates my skills in front-end development and creating seamless user experiences.
-    `,
-    image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80", 
-    github: "https://github.com/getabalewKemaw/Megezez-Resturant-Food-Delivery-System",
-    live: "#",
-    technologies: ["HTML", "CSS", "JavaScript"],
-  },
+  title: "Meshebesha Design – Enterprise E-Commerce Platform",
+  description: `
+    Meshebesha Design is not just an online store; it is a comprehensive digital retail
+    operating system. The platform automates the entire order lifecycle — from customer
+    browsing to payment, delivery, and reviews. Built with a scalable enterprise-grade
+    architecture inspired by Next.js 16 and Express.js 5.
+  `,
+  image: "/images/meshebesha.png",
+  github: "https://github.com/getabalewKemaw/MeshebeshaDesignFrontend",
+  live: "https://meshebesha-design-frontend.vercel.app",
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Express.js",
+    "PostgreSQL",
+    "Chapa Payment"
+  ],
+},
+{
+  title: "PromptMasterPro – Multilingual AI Prompt Assistant",
+  description: `
+    PromptMasterPro is a mobile application designed for Ethiopians to enhance AI prompts.
+    Users can submit prompts via text or voice in Amharic, English, Afan Oromo, or Tigrigna.
+    The app processes the input and returns optimized prompts in both English and the
+    selected local language, making AI more accessible and effective.
+  `,
+  image: "/images/promptmasterpro.png",
+  github: "https://github.com/getabalewKemaw/PromptMasterPro",
+  live: "#",
+  technologies: [
+    "React Native (Expo)",
+    "Express.js",
+    "TypeScript",
+    "PostgreSQL",
+    "AI Processing"
+  ],
+},
+
+{
+  title: "MEGEZEZ Restaurant – Food & Table Booking Platform",
+  description: `
+    MEGEZEZ Restaurant is a modern and responsive restaurant website built for
+    Debre Berhan University (DBU) students and teachers. Users can explore menus,
+    book tables, and contact the restaurant easily, providing a smooth dining
+    experience both online and offline.
+  `,
+  image: "/images/megezez.png",
+  github: "https://github.com/getabalewKemaw/Megezez-Resturant-Food-Delivery-System",
+  live: "https://megezez-resturant.vercel.app/",
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+},
+
+
   {
     title: "University Complaint Tracker Desktop App",
     description: `
@@ -174,6 +220,31 @@ projects: [
     live: "#",
     technologies: ["Spring Boot", "Next.js", "PostgreSQL", "Tailwind CSS"],
   },
+{
+  title: "HireNest – Skill-Based Job Matching Platform",
+  description: `
+    HireNest is a full-stack job platform designed to enable skill-based job discovery
+    through smart recommendation and match-score logic. The system supports role-based
+    access for job seekers and employers, structured professional profiles, and
+    intelligent job listings ranked by compatibility.
+    
+    Built with a scalable architecture using React on the frontend and Spring Boot
+    on the backend, HireNest reflects real-world hiring workflows and enterprise-level
+    backend design principles.
+  `,
+  image: "/images/hirenest.png",
+  github: "https://github.com/getabalewKemaw/HireNest",
+  live: "#",
+  technologies: [
+    "React",
+    "Spring Boot",
+    "PostgreSQL",
+    "REST APIs",
+    "Role-Based Access Control"
+  ],
+},
+
+
 ],
 
 
