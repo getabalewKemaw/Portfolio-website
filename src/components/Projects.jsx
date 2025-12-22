@@ -86,58 +86,62 @@ const Projects = () => {
               glareEnable={true}
               glareMaxOpacity={0.17}
               scale={1.035}
-              className="w-full"
+              className="w-full h-full"
             >
               <div
                 ref={el => cardsRef.current[index] = el}
                 className="relative flex flex-col h-full glass rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 group"
               >
                 {/* Project Image */}
-<img
-  src={project.image}
-  alt={project.title}
-  className="w-full h-auto object-contain"
-  loading="lazy"
-/>
+                <div className="w-full h-48 sm:h-56 md:h-64 flex items-center justify-center bg-black/5 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="max-w-full max-h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
 
                 {/* Project Info */}
                 <div className="flex flex-col flex-1 p-5">
                   <h3 className="text-lg sm:text-xl font-semibold mb-2">{project.title}</h3>
                   <p className="text-gray-300 text-sm sm:text-base mb-4 line-clamp-4">{project.description.trim()}</p>
 
-                  <div className="flex flex-wrap gap-2 mt-auto mb-3">
-                    {project.technologies.map((tech, i) => (
-                      <span
-                        key={i}
-                        className="bg-white/10 backdrop-blur-sm border border-white/10 p-2 rounded-full flex items-center justify-center text-lg"
-                        title={tech}
-                      >
-                        {techIcons[tech] || tech}
-                      </span>
-                    ))}
-                  </div>
-                  {/* Action Buttons: always visible */}
-                  <div className="flex items-center gap-4 mt-auto">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-gray-200 bg-white/10 backdrop-blur-sm border border-white/10 px-3 py-2 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                      title="GitHub"
-                    >
-                      <FaGithub size={18} className="mr-1" /> <span className="text-xs">Code</span>
-                    </a>
-                    {project.live && project.live !== "#" && (
+                  <div className="mt-auto">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {project.technologies.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="bg-white/10 backdrop-blur-sm border border-white/10 p-2 rounded-full flex items-center justify-center text-lg"
+                          title={tech}
+                        >
+                          {techIcons[tech] || tech}
+                        </span>
+                      ))}
+                    </div>
+                    {/* Action Buttons: always visible */}
+                    <div className="flex items-center gap-4">
                       <a
-                        href={project.live}
+                        href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-gray-200 bg-white/10 backdrop-blur-sm border border-white/10 px-3 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                        title="Live Demo"
+                        className="flex items-center gap-1 text-gray-200 bg-white/10 backdrop-blur-sm border border-white/10 px-3 py-2 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        title="GitHub"
                       >
-                        <FaExternalLinkAlt size={16} className="mr-1" /><span className="text-xs">Live</span>
+                        <FaGithub size={18} className="mr-1" /> <span className="text-xs">Code</span>
                       </a>
-                    )}
+                      {project.live && project.live !== "#" && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-gray-200 bg-white/10 backdrop-blur-sm border border-white/10 px-3 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                          title="Live Demo"
+                        >
+                          <FaExternalLinkAlt size={16} className="mr-1" /><span className="text-xs">Live</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
