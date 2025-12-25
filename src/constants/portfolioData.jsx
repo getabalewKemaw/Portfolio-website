@@ -70,7 +70,7 @@ projects: [
   `,
   image: "/images/meshebesha.png",
   github: "https://github.com/getabalewKemaw/MeshebeshaDesignFrontend",
-  live: "https://meshebesha-design-frontend.vercel.app",
+  live: "#",
   technologies: [
     "Next.js",
     "TypeScript",
