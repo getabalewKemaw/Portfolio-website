@@ -10,8 +10,8 @@ const About = () => {
   const { title, description, resumeLink } = portfolioData.about;
 
   // Short, professional summary text (replace with your own if needed)
-  const shortDescription =description;
-    
+  const shortDescription = description;
+
 
   // Intersection Observer for animation trigger
   useEffect(() => {
@@ -55,7 +55,7 @@ const About = () => {
     <section
       id="about"
       ref={aboutRef}
-      className="relative min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-16 bg-black text-white"
+      className="relative min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 bg-transparent text-white overflow-hidden w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16"
     >
       {/* IMAGE LEFT on large screens, ABOVE on small screens */}
       <div className="flex-1 flex justify-center mb-8 md:mb-0 md:mr-8">
@@ -68,10 +68,10 @@ const About = () => {
 
       {/* TEXT RIGHT on large screens, BELOW on small screens */}
       <div className="flex-1 flex flex-col items-center md:items-start space-y-6 font-sans">
-        <h2 className="about-title text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-400 text-center md:text-center w-full">
+        <h2 className="about-title text-2xl sm:text-3xl md:text-5xl font-bold font-space text-cyan-400 text-center md:text-center w-full tracking-wider uppercase">
           {title}
         </h2>
-        <div className="about-text text-gray-300 text-base sm:text-lg md:text-[1.1rem] leading-relaxed text-center md:text-left max-w-lg">
+        <div className="about-text text-gray-300 text-base sm:text-lg md:text-[1.1rem] leading-relaxed text-center md:text-left max-w-lg font-ibm-plex">
           {shortDescription}
         </div>
         <div className="pt-3">

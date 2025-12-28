@@ -52,15 +52,15 @@ const Hero = () => {
         <CanvasScene />
       </div>
 
-      <div className="z-10 text-center px-6 py-10 max-w-4xl relative">
-        <h1 className="text-5xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+      <div className="z-10 text-center px-6 sm:px-12 md:px-16 py-10 w-full max-w-7xl mx-auto relative flex flex-col items-center justify-center">
+        <h1 className="text-5xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight font-space">
           <span className="text-white drop-shadow-2xl">Hi, I'm </span>
           <span className="text-[#06b6d4] drop-shadow-[0_0_30px_rgba(6,182,212,0.8)]">
             {name.split(" ")[0]} {name.split(" ").slice(1).join(" ")}
           </span>
         </h1>
 
-        <h2 className="text-4xl md:text-6xl font-bold mb-10" style={{ color: "#06b6d4" }}>
+        <h2 className="text-4xl md:text-6xl font-bold mb-10 font-fira" style={{ color: "#06b6d4" }}>
           <ReactTyped
             strings={[
               "FullStack Developer.",

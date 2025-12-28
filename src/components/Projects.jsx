@@ -72,10 +72,10 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="bg-black text-white py-20 px-2 sm:px-6 md:px-10 w-full">
-      <div className="w-full max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 mb-12">
-          Projects
+    <section id="projects" className="relative bg-transparent text-white py-20 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16 overflow-hidden">
+      <div className="w-full text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-[#06b6d4] mb-20 font-space tracking-tight uppercase">
+          Featured Work
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10">
           {portfolioData.projects.map((project, index) => (
@@ -104,8 +104,8 @@ const Projects = () => {
 
                 {/* Project Info */}
                 <div className="flex flex-col flex-1 p-5">
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-gray-300 text-sm sm:text-base mb-4 line-clamp-4">{project.description.trim()}</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 font-fira">{project.title}</h3>
+                  <p className="text-gray-300 text-sm sm:text-base mb-4 line-clamp-4 font-ibm-plex leading-relaxed">{project.description.trim()}</p>
 
                   <div className="mt-auto">
                     <div className="flex flex-wrap gap-2 mb-3">

@@ -61,11 +61,11 @@ const Testimonial = () => {
     <section
       id="testimonial"
       ref={sectionRef}
-      className="relative bg-black text-white py-20 w-full px-2 sm:px-6 md:px-14"
+      className="relative bg-transparent text-white py-20 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16 overflow-hidden"
     >
-      <div className="w-full max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 mb-12">
-          Testimonials
+      <div className="w-full text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-[#06b6d4] mb-20 font-space tracking-tight uppercase">
+          Kind Words
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 w-full">
           {testimonialData.map((item, index) => (
@@ -89,9 +89,9 @@ const Testimonial = () => {
                   className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-cyan-400/60 shadow-lg shadow-cyan-400/30 transition-all duration-300"
                   loading="lazy"
                 />
-                <h3 className="text-lg sm:text-xl font-semibold mb-1">{item.name}</h3>
-                <p className="text-cyan-400 text-xs sm:text-sm mb-3">{item.role}</p>
-                <p className="text-gray-300 text-sm sm:text-base">{item.text}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-1 font-fira">{item.name}</h3>
+                <p className="text-cyan-400 text-xs sm:text-sm mb-3 font-fira">{item.role}</p>
+                <p className="text-gray-300 text-sm sm:text-base font-ibm-plex leading-relaxed italic">"{item.text}"</p>
               </div>
             </Tilt>
           ))}

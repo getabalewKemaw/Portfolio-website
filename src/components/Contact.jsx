@@ -69,12 +69,12 @@ const Contact = () => {
         formRef.current,
         "MA39jJ5B6yPXvrcwX"   // replace with your EmailJS Public Key
       );
-      if(result.status !== 200) throw new Error("Failed to send message");
+      if (result.status !== 200) throw new Error("Failed to send message");
 
       alert("Message sent successfully!");
       formRef.current.reset();
     } catch (error) {
-      alert("Failed to send message. Check your EmailJS configuration or network.",error);
+      alert("Failed to send message. Check your EmailJS configuration or network.", error);
     } finally {
       setSending(false);
     }
@@ -84,31 +84,24 @@ const Contact = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative py-20 px-2 sm:px-6 md:px-16 w-full"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url('https://images.unsplash.com/photo-1508984921474-bc8302cb4d04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBjfGVufDB8fDB8fHww')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="relative py-32 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16 bg-transparent overflow-hidden"
     >
-      <div className="w-full max-w-4xl mx-auto text-center">
-        <h2 className="contact-title text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 mb-12">
-          Contact Me
+      <div className="w-full text-center">
+        <h2 className="contact-title text-3xl sm:text-4xl md:text-6xl font-extrabold text-[#06b6d4] mb-20 font-space tracking-tight uppercase">
+          Get In Touch
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-9 md:gap-12 w-full">
           {/* Contact Info */}
           <div className="space-y-6 contact-card text-left flex flex-col justify-center glass p-6 rounded-2xl w-full">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 font-ibm-plex">
               <FaEnvelope className="text-cyan-400 text-2xl" />
               <p className="break-all">gech12kemaw@gmail.com</p>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 font-ibm-plex">
               <FaPhone className="text-cyan-400 text-2xl" />
               <p>+251 900 000 000</p>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 font-ibm-plex">
               <FaMapMarkerAlt className="text-cyan-400 text-2xl" />
               <p>Addis Ababa, Ethiopia</p>
             </div>
@@ -126,7 +119,7 @@ const Contact = () => {
                 name="from_name"
                 placeholder="Your Name"
                 required
-                className="w-full py-3 pl-10 pr-3 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full py-3 pl-10 pr-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 font-fira"
               />
             </div>
             <div className="relative">
@@ -136,7 +129,7 @@ const Contact = () => {
                 name="from_email"
                 placeholder="Your Email"
                 required
-                className="w-full py-3 pl-10 pr-3 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full py-3 pl-10 pr-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 font-fira"
               />
             </div>
             <div className="relative">
@@ -146,7 +139,7 @@ const Contact = () => {
                 placeholder="Your Message"
                 required
                 rows="5"
-                className="w-full py-3 pl-10 pr-3 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
+                className="w-full py-3 pl-10 pr-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 font-fira"
               />
             </div>
             <button

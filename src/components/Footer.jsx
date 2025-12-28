@@ -25,11 +25,11 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="bg-gray-900 text-white py-10 px-6 md:px-16"
+      className="bg-transparent text-white py-16 px-6 md:px-16"
     >
       <div className="max-w-6xl mx-auto text-center footer-content space-y-6">
         {/* Logo / Name */}
-        <h2 className="text-2xl font-bold text-cyan-400">
+        <h2 className="text-3xl font-bold text-cyan-400 font-space tracking-tight">
           {portfolioData.hero.name}
         </h2>
 
@@ -65,7 +65,7 @@ const Footer = () => {
         </button>
 
         {/* Copyright */}
-        <p className="text-gray-500 text-sm mt-4">
+        <p className="text-gray-500 text-sm mt-4 font-fira">
           &copy; {currentYear} {portfolioData.hero.name}. All rights reserved.
         </p>
       </div>

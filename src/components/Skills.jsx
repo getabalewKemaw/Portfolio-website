@@ -41,11 +41,11 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative bg-black text-white py-20 px-0 w-full"
+      className="relative bg-transparent text-white py-20 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16"
     >
-      <div className="w-full mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 mb-12 text-center">
-          My Skills
+      <div className="w-full text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-[#06b6d4] mb-20 text-center font-space tracking-tight uppercase">
+          Technical Toolkit
         </h2>
 
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-10 px-4 sm:px-8 md:px-16">
@@ -64,8 +64,8 @@ const Skills = () => {
                            transform transition-transform duration-300 hover:scale-110 w-full"
               >
                 <div className="text-4xl sm:text-5xl mb-2">{skill.icon}</div>
-                <h3 className="text-base sm:text-xl font-semibold mb-1">{skill.name}</h3>
-                <p className="text-gray-400 text-sm sm:text-base">{skill.proficiency}</p>
+                <h3 className="text-base sm:text-xl font-bold mb-1 font-fira">{skill.name}</h3>
+                <p className="text-gray-400 text-sm sm:text-base font-ibm-plex">{skill.proficiency}</p>
               </div>
             </Tilt>
           ))}

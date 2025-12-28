@@ -40,11 +40,11 @@ const Experience = () => {
     <section
       id="experience"
       ref={sectionRef}
-      className="relative w-full bg-black text-white py-20 px-2 sm:px-6 md:px-16"
+      className="relative w-full bg-transparent text-white py-20 max-w-7xl mx-auto px-6 sm:px-12 md:px-16 overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 mb-12">
-          Experience Timeline
+      <div className="w-full text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-[#06b6d4] mb-20 font-space tracking-tight uppercase">
+          Journey So Far
         </h2>
         <div className="relative flex flex-col items-center">
           {/* Vertical line */}
@@ -62,8 +62,8 @@ const Experience = () => {
                   {isLeft && (
                     <div className="md:w-1/2 w-full pr-0 md:pr-8 flex flex-col items-end">
                       <div className="glass p-6 rounded-2xl text-left w-full max-w-md">
-                        <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{exp.role}</h3>
-                        <p className="text-gray-300 text-sm sm:text-base whitespace-pre-line">{exp.description.trim()}</p>
+                        <h3 className="text-lg sm:text-xl font-bold text-white mb-2 font-fira">{exp.role}</h3>
+                        <p className="text-gray-300 text-sm sm:text-base whitespace-pre-line font-ibm-plex leading-relaxed">{exp.description.trim()}</p>
                       </div>
                     </div>
                   )}
@@ -72,7 +72,7 @@ const Experience = () => {
                     <span className="flex items-center justify-center w-8 h-8 bg-cyan-400 rounded-full shadow-lg shadow-cyan-400/30 border-4 border-black z-10">
                       <FaCircle className="text-white text-lg" />
                     </span>
-                    <span className="text-cyan-400 font-bold text-xs sm:text-sm mt-2 md:mt-4 whitespace-nowrap">
+                    <span className="text-cyan-400 font-bold text-xs sm:text-sm mt-2 md:mt-4 whitespace-nowrap font-fira">
                       {exp.year}
                     </span>
                   </div>
@@ -80,8 +80,8 @@ const Experience = () => {
                   {!isLeft && (
                     <div className="md:w-1/2 w-full pl-0 md:pl-8 flex flex-col items-start">
                       <div className="glass p-6 rounded-2xl text-left w-full max-w-md">
-                        <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{exp.role}</h3>
-                        <p className="text-gray-300 text-sm sm:text-base whitespace-pre-line">{exp.description.trim()}</p>
+                        <h3 className="text-lg sm:text-xl font-bold text-white mb-2 font-fira">{exp.role}</h3>
+                        <p className="text-gray-300 text-sm sm:text-base whitespace-pre-line font-ibm-plex leading-relaxed">{exp.description.trim()}</p>
                       </div>
                     </div>
                   )}

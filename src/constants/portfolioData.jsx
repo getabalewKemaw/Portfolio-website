@@ -341,5 +341,4 @@ projects: [
     },
   },
 };
-
 export default portfolioData;
