@@ -8,21 +8,21 @@ gsap.registerPlugin(ScrollTrigger);
 // Use free Unsplash/Pexels images for better quality and variety
 const testimonialData = [
   {
-    name: "Alice Johnson",
-    role: "Frontend Developer",
-    image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&q=80&facepad=2",
-    text: "Getabalew is a highly skilled developer! His React and GSAP animations made our project come alive. Truly professional and punctual.",
+    name: "Altaseb  Cherent",
+    role: "Full stack  Developer",
+    image: "https://avatars.githubusercontent.com/u/185071027?v=4",
+    text: "Getabalew is a highly skilled developer! His React and collaboration  skills made our project come alive. Truly professional and punctual.",
   },
   {
-    name: "Michael Smith",
-    role: "Project Manager",
-    image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&w=400&h=400&fit=facearea&facepad=2",
-    text: "Working with Getabalew was seamless. His UI/UX expertise elevated our app, making it both intuitive and visually stunning.",
+    name: "Leta kasahun",
+    role: "Full stack developer",
+    image: "https://avatars.githubusercontent.com/u/193022391?v=4",
+    text: "Working with Getabalew was seamless. His backend  skills elevated our app, making it both intuitive and visually stunning.",
   },
   {
-    name: "Sophia Lee",
-    role: "Designer",
-    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=400&q=80&facepad=2",
+    name: "Getahun Mengste",
+    role: "Front end Developer",
+    image: "images/gech.png",
     text: "Getabalew’s attention to detail and coding skills are exceptional. He turned our concepts into interactive experiences effortlessly.",
   },
 ];
@@ -61,11 +61,11 @@ const Testimonial = () => {
     <section
       id="testimonial"
       ref={sectionRef}
-      className="relative bg-black text-white py-20 w-full px-2 sm:px-6 md:px-14"
+      className="relative bg-transparent text-white py-20 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16 overflow-hidden"
     >
-      <div className="w-full max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 mb-12">
-          Testimonials
+      <div className="w-full text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-[#06b6d4] mb-20 font-space tracking-tight uppercase">
+          Kind Words
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 w-full">
           {testimonialData.map((item, index) => (
@@ -89,9 +89,9 @@ const Testimonial = () => {
                   className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-cyan-400/60 shadow-lg shadow-cyan-400/30 transition-all duration-300"
                   loading="lazy"
                 />
-                <h3 className="text-lg sm:text-xl font-semibold mb-1">{item.name}</h3>
-                <p className="text-cyan-400 text-xs sm:text-sm mb-3">{item.role}</p>
-                <p className="text-gray-300 text-sm sm:text-base">{item.text}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-1 font-fira">{item.name}</h3>
+                <p className="text-cyan-400 text-xs sm:text-sm mb-3 font-fira">{item.role}</p>
+                <p className="text-gray-300 text-sm sm:text-base font-ibm-plex leading-relaxed italic">"{item.text}"</p>
               </div>
             </Tilt>
           ))}

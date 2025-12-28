@@ -33,15 +33,15 @@ const NavBar = () => {
       ref={navRef}
       className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-xl border-b border-white/10"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-       
-        <div className="text-2xl font-bold text-white tracking-wide cursor-pointer hover:text-cyan-400 transition-colors duration-300">
-         <Link to="/"> GK</Link>  
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 md:px-16 py-4 flex justify-between items-center">
+
+        <div className="text-2xl font-bold text-white tracking-widest cursor-pointer hover:text-cyan-400 transition-colors duration-300 font-space">
+          <Link to="/"> GK</Link>
           <span className="text-cyan-400">.</span>
         </div>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex gap-8 text-white text-sm font-medium">
+        <ul className="hidden md:flex gap-8 text-white text-sm font-semibold font-fira tracking-wide uppercase">
           {portfolioData.navLinks.map((link) => (
             <li key={link.id} className="nav-item">
               <Link

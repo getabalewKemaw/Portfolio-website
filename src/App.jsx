@@ -9,15 +9,15 @@ import Testimonial from "./components/Testimonial";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
-import BackgroundBubbles from "./components/BackgroundBubbles";
+import Modern3DBackground from "./components/Modern3DBackground";
 import AnimatedDivider from "./components/AnimatedDivider";
 
 
 
 function App() {
   return (
-    <div className="font-sans relative">
-      <BackgroundBubbles />
+    <div className="font-ibm-plex relative bg-[#030712] text-white">
+      <Modern3DBackground />
       <Navbar />
 
       <Hero />
