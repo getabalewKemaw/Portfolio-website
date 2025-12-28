@@ -84,10 +84,10 @@ const Hero = () => {
           </button>
 
           <button
-            onClick={() => window.open("https://drive.google.com/file/d/1CUybI8k8qmM3iOSqoeSX5Q6VixoykJr8/view?usp=drive_link", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/1iLbP0nTDgI0N0uiqjcQ276Nq4znLihTc/view", "_blank")}
             className="text-gray-200 px-6 py-4 rounded-xl border-2 border-gray-600 hover:border-[#06b6d4] hover:text-[#06b6d4] hover:bg-[#06b6d4]/10 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 font-semibold text-lg backdrop-blur-sm flex items-center justify-center gap-2"
           >
-            <FaDownload /> Download CV
+            <FaDownload /> Veiw Resume
           </button>
         </div>
 
