@@ -116,8 +116,8 @@ router.post('/', auth, upload.single('cover_image'), async (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(201).send(JSON.stringify(result.rows[0]));
     } catch (err) {
-        console.error(err);
-        res.status(500).send(JSON.stringify({ error: 'Failed to create post' }));
+        console.error('CREATE POST ERROR:', err);
+        res.status(500).send(JSON.stringify({ error: err.message || 'Failed to create post' }));
     }
 });
 
@@ -141,19 +141,23 @@ router.put('/:id', auth, upload.single('cover_image'), async (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify(result.rows[0]));
     } catch (err) {
-        console.error(err);
-        res.status(500).send(JSON.stringify({ error: 'Failed to update post' }));
+        console.error('UPDATE POST ERROR:', err);
+        res.status(500).send(JSON.stringify({ error: err.message || 'Failed to update post' }));
     }
 });
 
 // DELETE post (PROTECTED)
 router.delete('/:id', auth, async (req, res) => {
     try {
-        await pool.query('DELETE FROM blog_posts WHERE id = $1', [req.params.id]);
-        res.send(JSON.stringify({ message: 'Post deleted' }));
+        const result = await pool.query('DELETE FROM blog_posts WHERE id = $1 RETURNING *', [req.params.id]);
+        if (result.rows.length === 0) {
+            return res.status(404).send(JSON.stringify({ error: 'Post not found' }));
+        }
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({ message: 'Post deleted successfully' }));
     } catch (err) {
-        console.error(err);
-        res.status(500).send(JSON.stringify({ error: 'Failed to delete post' }));
+        console.error('DELETE POST ERROR:', err);
+        res.status(500).send(JSON.stringify({ error: err.message || 'Failed to delete post' }));
     }
 });
 
@@ -209,8 +213,8 @@ router.post('/:slug/comments', async (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(201).send(JSON.stringify(result.rows[0]));
     } catch (err) {
-        console.error(err);
-        res.status(500).send(JSON.stringify({ error: 'Failed to add comment' }));
+        console.error('COMMENT ERROR:', err);
+        res.status(500).send(JSON.stringify({ error: err.message || 'Failed to add comment' }));
     }
 });
 
