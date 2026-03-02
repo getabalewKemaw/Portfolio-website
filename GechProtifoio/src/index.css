@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-ibm-plex: "IBM Plex Mono", monospace;
@@ -7,7 +8,9 @@
 }
 
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   color: white;
 }
@@ -22,8 +25,8 @@ body::before {
   content: "";
   position: fixed;
   inset: -10%;
-  background: radial-gradient(ellipse at 50% -10%, rgba(34,211,238,0.18), transparent 45%),
-              radial-gradient(ellipse at -20% 120%, rgba(59,130,246,0.12), transparent 55%);
+  background: radial-gradient(ellipse at 50% -10%, rgba(34, 211, 238, 0.18), transparent 45%),
+    radial-gradient(ellipse at -20% 120%, rgba(59, 130, 246, 0.12), transparent 55%);
   pointer-events: none;
   z-index: -20;
 }
@@ -35,11 +38,25 @@ body::before {
 
 /* Animated divider dot */
 @keyframes dividerRun {
-  0% { left: 0%; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { left: 100%; opacity: 0; }
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
 }
+
 .animate-divider-dot {
   animation: dividerRun 3.6s ease-in-out infinite;
 }

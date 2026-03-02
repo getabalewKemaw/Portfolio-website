@@ -99,7 +99,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center gap-4 font-ibm-plex">
               <FaPhone className="text-cyan-400 text-2xl" />
-              <p>+251 900 000 000</p>
+              <p>+251 944 46 31 98</p>
             </div>
             <div className="flex items-center gap-4 font-ibm-plex">
               <FaMapMarkerAlt className="text-cyan-400 text-2xl" />

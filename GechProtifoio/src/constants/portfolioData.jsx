@@ -25,11 +25,14 @@ import {
 const portfolioData = {
   // ---------------- NAVBAR ----------------
   navLinks: [
-    { id: "home", title: "Home" },
+    // { id: "home", title: "Home" },
     { id: "about", title: "About" },
     { id: "projects", title: "Projects" },
     { id: "skills", title: "Skills" },
+    { id: "github-stats", title: "Activity" },
     { id: "experience", title: "Experience" }, // Added for professionalism: Include work history
+    { id: "certification", title: "Certifications" },
+    { id: "blog", title: "Blog" },
     { id: "contact", title: "Contact" },
   ],
 
@@ -53,7 +56,7 @@ const portfolioData = {
 I am a Full-Stack developer  with 1 years of  experience(Independant self intiative  projects), specializing in building responsive, interactive web applications using React, Tailwind CSS, Next.js, Node.js, Express, MongoDB, Python, ,java,php,and PostgreSQL. I have hands-on expertise in full-stack development, applying best practices including state management, code optimization, and seamless API integration.
 
 With a collaborative mindset and a passion for innovation, I actively contribute to open-source projects and engage with tech communities. Based in Debre Berhan, Ethiopia, I stay up-to-date with the latest technologies, continuously enhancing my skills to deliver high-quality, scalable, and user-centric solutions.    `,
-    resumeLink: "https://drive.google.com/file/d/1iLbP0nTDgI0N0uiqjcQ276Nq4znLihTc/view?usp=drive_link", // Place your professional resume PDF in /public; ensure it highlights education, certifications, and achievements
+    resumeLink: "https://drive.google.com/file/d/1jhpCOXmWqSG17GFa9oWkqv_gVNuYX3xs/view?usp=drive_link", // Place your professional resume PDF in /public; ensure it highlights education, certifications, and achievements
   },
 
   // ---------------- PROJECTS SECTION ----------------
@@ -115,48 +118,6 @@ With a collaborative mindset and a passion for innovation, I actively contribute
         "CSS",
         "JavaScript"
       ],
-    },
-
-
-    {
-      title: "University Complaint Tracker Desktop App",
-      description: `
-      A desktop application for managing university complaints. Students can submit complaints, 
-      admins resolve them, and students receive notifications on resolution status. 
-      Built with Python and SQL, the project emphasizes backend logic, database integration, 
-      and a clean workflow for communication between students and administrators.
-    `,
-      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
-      github: "https://github.com/getabalewKemaw/Universty-Complint-tracker-Desktop-App",
-      live: "#",
-      technologies: ["Python", "SQL"],
-    },
-    {
-      title: "JobConnect Ethiopia",
-      description: `
-      A C++ project connected to a PostgreSQL database that facilitates job postings and matches 
-      job seekers with employers. This system implements core data structures and algorithms while 
-      also handling efficient database operations. It demonstrates problem-solving, 
-      database integration, and backend development skills.
-    `,
-      image: "https://media.istockphoto.com/id/2169789592/photo/digital-marketing-targeting-concept-businessman-with-marketing-icons-represent-targeting.jpg?s=612x612&w=is&k=20&c=9khmf-LXutefkrCTlmct7-TxgPS2zZxk9w2LsUTYRz4=",
-      github: "https://github.com/getabalewKemaw/JobConnectEthiopia",
-      live: "#",
-      technologies: ["C++", "PostgreSQL"],
-    },
-    {
-      title: "Internship Control Platform",
-      description: `
-      A web platform for managing internships between students, companies, and universities. 
-      Built with HTML, CSS, and JavaScript, it allows companies to post internships, 
-      students to apply, and administrators to track progress. 
-      The project demonstrates full-stack thinking with a focus on clean UI, local storage handling, 
-      and role-based access.
-    `,
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
-      github: "https://github.com/getabalewKemaw/Intershipcontrolplatform",
-      live: "#",
-      technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
       title: "Movie App",
@@ -273,9 +234,9 @@ With a collaborative mindset and a passion for innovation, I actively contribute
     { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-800" />, proficiency: "Intermediate" },
 
     // DevOps & Cloud
-    // {  name: "Docker & Containerization", icon: <SiDocker className="text-blue-400" />, proficiency: "Intermediate" },
-    // { name: "AWS Cloud Services", icon: <SiAwsamplify className="text-orange-500" />, proficiency: "Beginner" },
-    // { name: "DevOps & CI/CD", icon: <FaCloud className="text-purple-500" />, proficiency: "Intermediate" },                 
+    { name: "Docker & Containerization", icon: <SiDocker className="text-blue-400" />, proficiency: "Intermediate" },
+    { name: "AWS Cloud Services", icon: <SiAwsamplify className="text-orange-500" />, proficiency: "Beginner" },
+    { name: "DevOps & CI/CD", icon: <FaCloud className="text-purple-500" />, proficiency: "Intermediate" },
   ],
   // ---------------- EXPERIENCE SECTION (Added for Professionalism) ----------------
   experience: [
@@ -327,6 +288,28 @@ With a collaborative mindset and a passion for innovation, I actively contribute
 
 
 
+
+  // ---------------- CERTIFICATIONS SECTION ----------------
+  certifications: [
+    {
+      title: "Software Engineering Certification",
+      issuer: "Debre Berhan University",
+      image: "/images/certefications/Getabalewkemaw.jpg",
+      date: "2025"
+    },
+    {
+      title: "Data Science Specialization",
+      issuer: "DataCamp",
+      image: "/images/certefications/datacamp.png",
+      date: "2026"
+    },
+    {
+      title: "Hackathon Winner - Innovation Award",
+      issuer: "DBU Hackathon",
+      image: "/images/certefications/dbuhackaton.png",
+      date: "2025"
+    }
+  ],
 
   //he development of client-facing web applications using React and Three.js, resulting in a 30% improvement in user engagement. Collaborated with cross-functional teams to integrate GSAP animations and optimize performance, reducing load times by 40%. Managed deployment pipelines on Vercel and AWS.
   // ---------------- CONTACT SECTION ----------------
